@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CustomInputComponent } from './custom-input/custom-input.component';
 // Services
 import { DbServiceService } from './services/db-service.service';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -24,7 +25,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import localeDe from '@angular/common/locales/fr';
 // Locales i18n
 import { registerLocaleData } from '@angular/common';
-import { FooterComponent } from './footer/footer.component';
 
 // For locales i18n
 registerLocaleData(localeDe);
@@ -39,18 +39,24 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     SimpleReactiveFormComponent,
     CustomInputComponent,
+<<<<<<< HEAD
     HomeComponent,
     NavComponent,
     FooterComponent,
+=======
+>>>>>>> 8909737d6d58a14f3f4af368c6709c4bf67cff29
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+<<<<<<< HEAD
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
     MatInputModule,
+=======
+>>>>>>> 8909737d6d58a14f3f4af368c6709c4bf67cff29
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
