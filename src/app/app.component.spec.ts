@@ -1,10 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
+import { CustomInputComponent } from './custom-input/custom-input.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        SimpleReactiveFormComponent,
+        CustomInputComponent
       ],
     }).compileComponents();
   }));
@@ -22,6 +26,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('h1').textContent).toContain('This App with severalt experiments on working with forms is growing.');
   }));
 });
