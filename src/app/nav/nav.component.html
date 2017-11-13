@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row >
+    <ul >
+      <button mat-button [routerLink]="['/home']">Home</button>
+      <button mat-button [routerLink]="['/simpleform']">Simple Reactive Form</button>
+    </ul>
+    <span class="fill-remaining-space"></span>
+    <div [ngSwitch]="activatedLanguage">
+      <button mat-button *ngSwitchCase="'en'" (click)="switchLanguage('de')" >English</button>
+      <button mat-button *ngSwitchCase="'de'" (click)="switchLanguage('en')" >Deutsch</button>
+    </div>
+    <span class="toolbar-right-space"></span>
+  </mat-toolbar-row>
+</mat-toolbar>

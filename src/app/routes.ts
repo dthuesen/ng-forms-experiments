@@ -1,7 +1,9 @@
-import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
 
 export const ROUTES = [
   { path: 'simpleform', component: SimpleReactiveFormComponent },
-  { path: '', component: AppComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
 ];

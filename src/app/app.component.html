@@ -1,5 +1,8 @@
-<h1 translate>app-component-h1</h1>
-
-<h3 translate>app-component-h3</h3>
-<router-outlet></router-outlet>
+<body class="my-theme">
+  <app-nav (language)="switchLanguage($event)"></app-nav>
+  <mat-grid-list cols="12">
+    <router-outlet></router-outlet>
+  </mat-grid-list>
+  <app-footer></app-footer>
+</body> 
 

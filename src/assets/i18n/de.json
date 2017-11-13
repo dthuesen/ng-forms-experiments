@@ -1,4 +1,6 @@
 {
     "app-component-h1": "Diese App experimentiert mit Formularen und ist am Wachsen.",
-    "app-component-h3": "Das erste Formular:"
+    "app-component-h3": "Der Kontent-Bereich:",
+    "simpleform-component-h1": "Diese Komponente beinhaltet ein einfaches Model-Driven-Form (Reactive Form).",
+    "simpleform-component-h3": "Adressdaten:"
 }

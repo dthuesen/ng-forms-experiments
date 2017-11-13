@@ -1,5 +1,14 @@
-<form>
-  <label for="firstName">First Name:</label>
-  <input type="text" name="firstName" value="" tanslate>
-  <app-custom-input [label]="'Last Name:'"></app-custom-input>
+<h1 class="mat-display-1" translate>simpleform-component-h1</h1>
+<h3 class="mat-h3" translate>simpleform-component-h3</h3>
+<form autocomplete="off">
+  <mat-grid-list cols="12">
+    <mat-grid-tile [colspan]="12" [rowspan]="1">
+      <mat-form-field >
+        <input matInput placeholder="First Name" type="text" name="firstName" value="" translate>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="12" [rowspan]="1">
+      <app-custom-input matInput placeholder="Last Name:"></app-custom-input>
+    </mat-grid-tile>
+  </mat-grid-list>
 </form>
