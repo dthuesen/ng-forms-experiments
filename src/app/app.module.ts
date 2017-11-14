@@ -39,24 +39,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     SimpleReactiveFormComponent,
     CustomInputComponent,
-<<<<<<< HEAD
     HomeComponent,
     NavComponent,
     FooterComponent,
-=======
->>>>>>> 8909737d6d58a14f3f4af368c6709c4bf67cff29
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-<<<<<<< HEAD
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
     MatInputModule,
-=======
->>>>>>> 8909737d6d58a14f3f4af368c6709c4bf67cff29
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
