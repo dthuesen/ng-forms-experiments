@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // ngx-translate
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { DbServiceService } from './services/db-service.service';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,6 +27,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import localeDe from '@angular/common/locales/fr';
 // Locales i18n
 import { registerLocaleData } from '@angular/common';
+import { DiyGridSystemComponent } from './diy-grid-system/diy-grid-system.component';
 
 // For locales i18n
 registerLocaleData(localeDe);
@@ -42,11 +45,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     NavComponent,
     FooterComponent,
+    DiyGridSystemComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
@@ -61,7 +68,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot( ROUTES, {useHash: false}),
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'de'},
+    { provide: LOCALE_ID, useValue: 'de' },
     DbServiceService,
   ],
   bootstrap: [AppComponent]

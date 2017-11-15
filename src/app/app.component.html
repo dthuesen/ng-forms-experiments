@@ -1,8 +1,8 @@
 <body class="my-theme">
-  <app-nav (language)="switchLanguage($event)"></app-nav>
-  <mat-grid-list cols="12">
+  <nav (language)="switchLanguage($event)"></nav>
+  <mat-grid-list cols="12" class="content-container">
     <router-outlet></router-outlet>
   </mat-grid-list>
-  <app-footer></app-footer>
+  <footer></footer>
 </body> 
 

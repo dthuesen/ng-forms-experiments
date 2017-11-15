@@ -2,5 +2,10 @@
     "app-component-h1": "Diese App experimentiert mit Formularen und ist am Wachsen.",
     "app-component-h3": "Der Kontent-Bereich:",
     "simpleform-component-h1": "Diese Komponente beinhaltet ein einfaches Model-Driven-Form (Reactive Form).",
-    "simpleform-component-h3": "Adressdaten:"
+    "simpleform-component-h3": "Adressdaten:",
+    "form-first-name": "Vorname:",
+    "form-last-name": "Nachname:",
+    "form-email": "E-Mail:",
+    "form-telephone": "Festnetz-Nummer:",
+    "form-cellphone": "Mobil-Nummer:"
 }

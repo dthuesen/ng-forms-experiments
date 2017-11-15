@@ -5,7 +5,7 @@ import { EventEmitter, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   encapsulation: ViewEncapsulation.None

@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import the custom theme
+@import "theme.scss";
+// import the GRID SYSTEM
+@import "grid-system.scss";
+@import "colors.scss";
+
+// specify theme class eg: <body class="my-theme"> ... </body>
+.my-theme {
+  
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($my-theme);
+}
+
+body {
+  font-size: $font-size;
+  background-color: $illu-dark-grey;
+  color: $illu-silver;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+}
+
+.app-footer {
+  color: $illu-light-metal;
+  position:absolute;
+  bottom:0px !important;
+  background-color: $illu-heavy-metal;
+  width: 100%;
+  height: 5em;
+  margin: 0px auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.content-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 32px;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.content-container-grid {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 32px;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+mat-form-field, app-custom-input {
+  width: 100%;
+}
+
+
+// for placing toolbar onto the right side
+.fill-remaining-space {
+  // This fills the remaining space, by using flexbox. 
+  // Every toolbar row uses a flexbox row layout.
+  flex: 1 1 auto;
+}
+.toolbar-right-space {
+  margin-right: 64px;
+}
+
+.cust-mat-tile-1-12 {
+  width: grid-width(1, true);
+  margin: 8px;
+}
+.cust-mat-tile-2-12 {
+  width: grid-width(2, true);
+  
+}
+.cust-mat-tile-3-12 {
+  width: grid-width(3, true);
+  
+}
+.cust-mat-tile-4-12 {
+  width: grid-width(4, true);
+  
+}
+.cust-mat-tile-5-12 {
+  width: grid-width(5, true);
+  
+}
+.cust-mat-tile-6-12 {
+  width: grid-width(6, true);
+  
+}
+.cust-mat-tile-7-12 {
+  width: grid-width(7, true);
+  margin: 8px;
+}
+.cust-mat-tile-8-12 {
+  width: grid-width(8, true);
+  margin: 8px;
+}
+.cust-mat-tile-9-12 {
+  width: grid-width(9, true);
+  margin: 8px;
+}
+.cust-mat-tile-10-12 {
+  width: grid-width(10, true);
+  margin: 8px;
+}
+.cust-mat-tile-11-12 {
+  width: grid-width(11, true);
+  margin: 8px;
+}
+.cust-mat-tile-6-12 {
+  width: grid-width(12, true);
+  margin: 8px;
+}
+
+
+
+
+

@@ -1,0 +1,109 @@
+
+/*
+  ***                                THE GRID SYSTEM                                        ***
+  =============================================================================================
+  How to use it in HTML CSS classes:
+  Media queries:      (none)  = 0
+                      sm      = 576px
+                      md      = 768px
+                      lg      = 992px
+                      xl      = 1200px
+                      largest = 1800px        <-- dependig on value in variable $max-width
+  Column span:        grid__col-lg-2          <-- means it spans the width of 2 from 12 columns 
+                                                  spans from 1 to 12 are available
+  Column offset:      grid__col-xl-offset-2   <-- this example offsets its element by 2 columns
+                                                  to the right. Gaps between items are possible
+*/
+
+$font-size: 16px;
+$line-height: 19.2px;
+$amount-spacings: 1px;
+$max-width: 1800;
+
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1200;
+$grid__bp-largest: $max-width;
+
+$grid__cols: 12;
+
+$map-grid-props: (
+  '': 0,
+  '-sm': $grid__bp-sm,
+  '-md': $grid__bp-md,
+  '-lg': $grid__bp-lg,
+  '-xl': $grid__bp-xl,
+  '-largest': $grid__bp-largest
+);
+
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+    padding: 0 0.5%;
+  } @else {
+    @media screen and (min-width: $breakpoint * 1px ) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    &__col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        $basis: (100 / ($grid-cols / $i) ) * 1%;
+        flex-basis: $basis - 1%;
+        padding: 0 .5%;
+      }
+      &__col#{$modifier}-offset-#{$i} {
+        margin-left: ( 100 / ($grid-cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+.grid {
+  max-width: $grid__bp-largest * 1px;
+  margin: 0 auto;
+  padding: 0 15px;
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 -1%;
+  }
+  &__padding-left {
+    padding-left: 7px;
+  }
+  &__padding-right {
+    padding-right: 7px;
+  }
+  &__padding {
+    // flex-basis: 20%;
+    // margin-left: 7px;
+    // margin-right: 7px;
+  }
+
+  @each $modifier , $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+
+}
+
+.clearfix {     // For antibug purpose
+  clear: both;
+}
+
+/*
+  ***                      END OF THE GRID SYSTEM DEFINITION                                ***
+  =============================================================================================
+*/
