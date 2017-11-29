@@ -1,44 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-@import '~@angular/material/theming';
 
-// always include only once per project
-@include mat-core();
+/** import the light or dark styles **/
+// @import "light-theme.scss";
+// @import "dark-theme.scss";
+@import "immaterial-theme.scss";
 
-// import the custom theme
-@import "theme.scss";
-// import the GRID SYSTEM
-@import "grid-system.scss";
+/** import the mandatories **/
 @import "colors.scss";
+@import 'font-sizes.scss';
+@import 'media-queries.scss';
+@import 'breakpoints.scss';
+@import 'main-visuals.scss';
 
-// specify theme class eg: <body class="my-theme"> ... </body>
-.my-theme {
-  
-  // use our theme with angular-material-theme mixin
-  @include angular-material-theme($my-theme);
+/** import the GRID SYSTEM **/
+@import "grid-system.scss";
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: $fontfamily;
+  font-size: $font-size;
 }
 
 body {
-  font-size: $font-size;
-  background-color: $illu-dark-grey;
-  color: $illu-silver;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: relative;
+  padding-top: 34px;
+  padding-bottom: 60px;
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
+  // padding-bottom: 1.35em;
   height: 100%;
 }
+a {
+  color: grey;
+}
+a:focus {
+  outline: 1px solid;
+  outline-offset: .15em;
+  color: skyblue;
+}
+a:hover {
+  outline: 1px solid;
+  outline-offset: .15em;
+  color: skyblue;
+}
 
-.app-footer {
-  color: $illu-light-metal;
-  position:absolute;
-  bottom:0px !important;
-  background-color: $illu-heavy-metal;
-  width: 100%;
-  height: 5em;
-  margin: 0px auto;
-  padding-left: 80px;
-  padding-right: 80px;
+.nav {
+  &__fixed {
+    position: fixed !important;
+    margin-top: -34px !important;
+    width: 100%;
+    z-index: 985;
+    transition: 0.3s ease-in all;
+  }
+  &__collapsed {
+    margin-top: -132px !important;
+    transition: 0.2s ease-out all;
+  }
+  &__logo {
+    width: auto;
+    height: 38px;
+    margin-left: 68px;
+  }
+
+}
+/** This is for placing elements in the toolbar onto the right side **/
+.fill-remaining-space {
+  /** This fills the remaining space, by using flexbox. 
+      Every toolbar row uses a flexbox row layout.      **/
+  flex: 1 1 auto;
+}
+.toolbar-right-space {
+  margin-right: 64px;
 }
 
 .content-container {
@@ -57,71 +92,58 @@ body {
   margin-right: 64px;
 }
 
+.app-footer {
+  z-index: 100;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100%;
+  height: 5em;
+  margin: 0px auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 mat-form-field, app-custom-input {
   width: 100%;
 }
 
-
-// for placing toolbar onto the right side
-.fill-remaining-space {
-  // This fills the remaining space, by using flexbox. 
-  // Every toolbar row uses a flexbox row layout.
-  flex: 1 1 auto;
-}
-.toolbar-right-space {
-  margin-right: 64px;
+.sidenav-container {
+  width: 100%;
+  height: 100%;
 }
 
-.cust-mat-tile-1-12 {
-  width: grid-width(1, true);
-  margin: 8px;
+.sidenav-content {
+  margin-left: 2px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
-.cust-mat-tile-2-12 {
-  width: grid-width(2, true);
-  
-}
-.cust-mat-tile-3-12 {
-  width: grid-width(3, true);
-  
-}
-.cust-mat-tile-4-12 {
-  width: grid-width(4, true);
-  
-}
-.cust-mat-tile-5-12 {
-  width: grid-width(5, true);
-  
-}
-.cust-mat-tile-6-12 {
-  width: grid-width(6, true);
-  
-}
-.cust-mat-tile-7-12 {
-  width: grid-width(7, true);
-  margin: 8px;
-}
-.cust-mat-tile-8-12 {
-  width: grid-width(8, true);
-  margin: 8px;
-}
-.cust-mat-tile-9-12 {
-  width: grid-width(9, true);
-  margin: 8px;
-}
-.cust-mat-tile-10-12 {
-  width: grid-width(10, true);
-  margin: 8px;
-}
-.cust-mat-tile-11-12 {
-  width: grid-width(11, true);
-  margin: 8px;
-}
-.cust-mat-tile-6-12 {
-  width: grid-width(12, true);
-  margin: 8px;
+.sidenav-toggle-button {
+  z-index: 999;
+  position: fixed !important;
+  left: 20px !important;
+  top: 94px !important;
 }
 
+mat-sidenav-content {
+  z-index: 2;
+  padding-left: 6px;
+}
 
+mat-sidenav {
+  background-color: dark-green;
+  border: 2px;
+  padding-right: 10px;
+  top: 80px;
+  // left: -35px;
+  margin-bottom: -80px;
+  height: 100%
+  // width: 200px;
+}
 
-
+.mat-sidenav-content,
+.sidenav-container mat-sidenav {
+  overflow: visible;
+}
 

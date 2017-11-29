@@ -1,0 +1,45 @@
+
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~****/
+ /***     ***     use with LIGHT theme     ***     ***/
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ //
+
+/** You can add global styles to this file, and also import other style files **/
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@angular/material/theming';
+@import 'colors.scss';
+
+@import 'scrollbar-light.scss';
+
+$fontfamily: Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$typography: mat-typography-config(
+  $font-family: $fontfamily
+);
+
+/** always include only once per project **/
+@include mat-core($typography);
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$my-light-theme-primary: mat-palette($brand-blue, 500, 300, 900);
+// $my-light-theme-primary: mat-palette($mat-blue, 500, 300, 900);
+$my-light-theme-accent: mat-palette($mat-light-green, 200, 900);
+$my-light-theme-warn: mat-palette($mat-deep-orange, 500, A100, 900);
+
+$my-light-theme: mat-light-theme(
+  $my-light-theme-primary,
+  $my-light-theme-accent,
+  $my-light-theme-warn
+);
+
+/** use this theme with angular-material-theme mixin **/
+@include angular-material-theme($my-light-theme);
+
+.app-footer {
+  color: $illu-grey;
+  background-color: $illu-silver;
+}
+
+.mat-drawer-container {
+  background-color: $white !important;
+}

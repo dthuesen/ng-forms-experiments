@@ -1,11 +1,18 @@
 {
-    "app-component-h1": "Diese App experimentiert mit Formularen und ist am Wachsen.",
-    "app-component-h3": "Der Kontent-Bereich:",
+    "home-h1": "Diese App experimentiert mit Formularen und wächst noch.",
+    "home-h2": "Diese h2 Unterüberschrift ist sehr eine sehr lange Unterüberschrift weil ich die Länge des Textes zum Testen Zeilenhöhe benötige.",
+    "home-h3": "Der Kontent-Bereich:",
+    "home-h3-2": "...auch in h3 ist dies eine wirklich lange h3 Unterüberschrift, denn auch hier benötige ich die Textlänge zum Testen der Zeilenhöhe.",
+    "home-h4": "Oder in fett als h4 Überschrift.",
     "simpleform-component-h1": "Diese Komponente beinhaltet ein einfaches Model-Driven-Form (Reactive Form).",
-    "simpleform-component-h3": "Adressdaten:",
+    "simpleform-component-h3-address-data": "Adressdaten:",
+    "simpleform-component-h3-contact-data": "Kontaktdaten:",
     "form-first-name": "Vorname:",
     "form-last-name": "Nachname:",
+    "form-name-addition1": "Namenszusatz:",
+    "form-name-addition2": "Weiterer Zusatz:",
     "form-email": "E-Mail:",
     "form-telephone": "Festnetz-Nummer:",
-    "form-cellphone": "Mobil-Nummer:"
+    "form-cellphone": "Mobil-Nummer:",
+    "test-component-h1": "Hier ist die TestCopmponent plaziert."
 }

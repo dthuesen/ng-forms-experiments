@@ -1,0 +1,44 @@
+@import 'colors.scss';
+
+// addresses the background of the bar itself. 
+// It is usually covered by the other elements
+body::-webkit-scrollbar {
+  width: .7em;
+  &:hover {
+    width: 1.7em;
+  }
+}
+
+// // addresses the empty space “below” the progress bar
+body::-webkit-scrollbar-track {
+  background-color: $brand-silver;
+}
+
+// addresses the draggable scrolling element 
+// that resizes depending on the size of the scrollable element
+body::-webkit-scrollbar-thumb {
+  background-color: $brand-silver;
+}
+
+// addresses the directional buttons on the scrollbar
+body::-webkit-scrollbar-button {
+  background-color: $brand-red;
+}
+
+// is the top-most layer of the the progress 
+// bar not covered by the draggable scrolling element (thumb)
+body::-webkit-scrollbar-track-piece {
+  background-color: $illu-silver;
+}
+
+// addresses the (usually) bottom corner of the 
+// scrollable element, where two scrollbars might meet
+body::-webkit-scrollbar-corner {
+  background-color: $brand-blue;
+}
+
+// addresses the draggable resizing handle that appears 
+// above the scrollbar-corner at the bottom corner of some elements
+body::-webkit-resizer {
+  background-color: $brand-red;
+}

@@ -32,6 +32,8 @@ export class SimpleReactiveFormComponent implements OnInit {
       driverName: this.fb.group({
         firstName: ['', Validators.minLength(2)],
         lastName: ['', Validators.minLength(2)],
+        nameAdditionOne: [''],
+        nameAdditionTwo: [''],
       }),
       driverContactInformation: this.fb.group({
         email: ['', Validators.minLength(2)],

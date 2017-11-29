@@ -1,15 +1,17 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row >
-    <ul >
-      <button mat-button [routerLink]="['/home']">Home</button>
-      <button mat-button [routerLink]="['/simpleform']">Simple Reactive Form</button>
-      <button mat-button [routerLink]="['/diy-grid-system']">DIY Grid System</button>
-    </ul>
-    <span class="fill-remaining-space"></span>
-    <div [ngSwitch]="activatedLanguage">
-      <button mat-button *ngSwitchCase="'en'" (click)="switchLanguage('de')" >English</button>
-      <button mat-button *ngSwitchCase="'de'" (click)="switchLanguage('en')" >Deutsch</button>
-    </div>
-    <span class="toolbar-right-space"></span>
-  </mat-toolbar-row>
-</mat-toolbar>
+  <mat-toolbar color="primary" class="nav__fixed" [ngClass]="{'nav__collapsed': hideToolbar}">
+    
+    <mat-toolbar-row>
+      <img class="nav__logo" src="../../assets/images/yoc-logo_inverse.svg" alt="yo-competence logo">
+      <ul >
+        <button mat-button [routerLink]="['/home']">Home</button>
+        <button mat-button [routerLink]="['/simpleform']">Simple Reactive Form</button>
+        <button mat-button [routerLink]="['/diy-grid-system']">DIY Grid System</button>
+      </ul>
+      <span class="fill-remaining-space"></span>
+      <div [ngSwitch]="activatedLanguage">
+        <button mat-button *ngSwitchCase="'en'" (click)="switchLanguage('de')" >English</button>
+        <button mat-button *ngSwitchCase="'de'" (click)="switchLanguage('en')" >Deutsch</button>
+      </div>
+      <span class="toolbar-right-space"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>

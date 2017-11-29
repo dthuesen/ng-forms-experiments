@@ -1,0 +1,19 @@
+<div class="grid">
+  <h1 translate>test-component-h1</h1>
+  <div class="grid__row">
+    <div class="grid__col-xl-offset-2 grid__col-xl-4 grid__col-lg-6 grid__col-md-6 grid__col-sm-12">
+        <div *showItBootstrap="['md','xs','sm', 'lg', 'xl']" style="height:200px; width:200px" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing on xs, sm, md, lg, xl.</div>
+        <div *showItBootstrap="['md','xs','sm', 'lg', 'xl']" style="height:200px" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing on xs, sm, md, lg, xl.</div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="grid__row">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>

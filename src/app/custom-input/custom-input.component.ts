@@ -7,7 +7,8 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'custom-input',
   template: `
-        <input matInput [placeholder]="_placeholder | translate" type="text" [formControl]="formControl">
+        <!-- <input matInput [placeholder]="_placeholder | translate" type="text" [formControl]="formControl"> -->
+        <input matInput [placeholder]="_placeholder | translate" type="text">
   `,
   styleUrls: ['./custom-input.component.css'],
   encapsulation: ViewEncapsulation.None
@@ -27,7 +28,7 @@ export class CustomInputComponent implements OnInit {
   }
 
 
-  private _placeholder: string;
+  public _placeholder: string;
 
   constructor(
     fb: FormBuilder,

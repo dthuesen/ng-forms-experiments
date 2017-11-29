@@ -1,13 +1,16 @@
 
+@import 'font-sizes.scss';
+@import 'breakpoints.scss';
 /*
   ***                                THE GRID SYSTEM                                        ***
   =============================================================================================
   How to use it in HTML CSS classes:
   Media queries:      (none)  = 0
-                      sm      = 576px
-                      md      = 768px
-                      lg      = 992px
-                      xl      = 1200px
+                      xs      = max 600px
+                      sm      = {min: 601, max: 959},
+                      md:     = {min: 960, max: 1279},
+                      lg:     = {min: 1280, max: 1919},
+                      xl:     = {min: 1920}
                       largest = 1800px        <-- dependig on value in variable $max-width
   Column span:        grid__col-lg-2          <-- means it spans the width of 2 from 12 columns 
                                                   spans from 1 to 12 are available
@@ -15,26 +18,21 @@
                                                   to the right. Gaps between items are possible
 */
 
-$font-size: 16px;
+
 $line-height: 19.2px;
 $amount-spacings: 1px;
-$max-width: 1800;
 
-$grid__bp-sm: 576;
-$grid__bp-md: 768;
-$grid__bp-lg: 992;
-$grid__bp-xl: 1200;
-$grid__bp-largest: $max-width;
 
 $grid__cols: 12;
 
 $map-grid-props: (
   '': 0,
-  '-sm': $grid__bp-sm,
-  '-md': $grid__bp-md,
-  '-lg': $grid__bp-lg,
-  '-xl': $grid__bp-xl,
-  '-largest': $grid__bp-largest
+  '-xs': $_bp-xs,
+  '-sm': $_bp-sm,
+  '-md': $_bp-md,
+  '-lg': $_bp-lg,
+  '-xl': $_bp-xl,
+  '-largest': $_bp-largest
 );
 
 @mixin create-mq($breakpoint) {
@@ -47,6 +45,7 @@ $map-grid-props: (
     }
   }
 }
+
 
 @mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
   @include create-mq($breakpoint) {
@@ -67,8 +66,12 @@ $map-grid-props: (
   }
 }
 
+// .grid__col-xs-12 {
+//   padding-left: 0px !important;
+// }
+
 .grid {
-  max-width: $grid__bp-largest * 1px;
+  max-width: $_bp-largest * 1px;
   margin: 0 auto;
   padding: 0 15px;
   &--fluid {
@@ -98,6 +101,7 @@ $map-grid-props: (
   }
 
 }
+
 
 .clearfix {     // For antibug purpose
   clear: both;

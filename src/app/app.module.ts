@@ -1,6 +1,6 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// ngx-translate
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+// ngx-translate
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
@@ -11,23 +11,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CustomInputComponent } from './custom-input/custom-input.component';
 // Services
 import { DbServiceService } from './services/db-service.service';
+import { DiyGridSystemComponent } from './diy-grid-system/diy-grid-system.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { NavComponent } from './nav/nav.component';
 import { ROUTES } from './routes';
+// Responsive Images and other items
+import { ResponsiveModule } from 'ngx-responsive';
 // Router
 import { RouterModule } from '@angular/router';
 import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
+import { TestComponent } from './test/test.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import localeDe from '@angular/common/locales/fr';
 // Locales i18n
+import localeDe from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
-import { DiyGridSystemComponent } from './diy-grid-system/diy-grid-system.component';
 
 // For locales i18n
 registerLocaleData(localeDe);
@@ -46,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavComponent,
     FooterComponent,
     DiyGridSystemComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,11 +62,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    ResponsiveModule,
     MatFormFieldModule,
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
     MatInputModule,
+    MatTooltipModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

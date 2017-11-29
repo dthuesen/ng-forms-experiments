@@ -1,11 +1,18 @@
 {
-    "app-component-h1": "This App with severalt experiments on working with forms is growing.",
-    "app-component-h3": "The content area:",
+    "home-h1": "This App with severalt experiments on working with forms and is still growing.",
+    "home-h2": "This h2 Subheadline is a very long subheadline because I need text length for testing the line height.",
+    "home-h3": "The content area:",
+    "home-h3-2": "...in h3 it is as well a very long h3 subheadline because again, I need text length for testing the line height.",
+    "home-h4": "Or in bold as h4 Headline.",
     "simpleform-component-h1": "This Component contains a simple model driven form (reactive form).",
-    "simpleform-component-h3": "Address data:",
-    "form-firstName": "First name:",
-    "form-lastName": "Last name:",
+    "simpleform-component-h3-address-data": "Addres data:",
+    "simpleform-component-h3-contact-data": "Contact data:",
+    "form-first-name": "First name:",
+    "form-last-name": "Last name:",
+    "form-name-addition1": "Additional to name:",
+    "form-name-addition2": "Further additions:",
     "form-email": "Email:",
     "form-telephone": "Phone:",
-    "form-cellphone": "Mobile:"
+    "form-cellphone": "Mobile:",
+    "test-component-h1": "The TestComponent is place here."
 }

@@ -1,0 +1,110 @@
+/* Smartphones (portrait and landscape) ----------- 
+   Size: XS                             ----------- */
+@media screen and (max-width: 600px) {
+  html, body, p {
+    font-size: 12px !important;
+    // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
+  }
+  h1 {
+    font-size: 1.9rem !important;
+  }
+  h2 {
+    font-size: 1.55rem !important;
+  }
+  h3 {
+    font-size: 1.2rem !important;
+    
+  }
+  h4 {
+    font-size: 1.2rem !important;
+  }
+}
+/* Phablets & Tablets (portrait and landscape) -----------
+   Size: SM                                    ----------- */
+@media screen and (min-width: 601px) and (max-width: 959px) {
+  html, body, p {
+    font-size: 14px !important;
+    // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.7rem !important;
+  }
+  h3 {
+    font-size: 1.35rem !important;
+  }
+  h4 {
+    font-size: 1.35rem !important;
+  }
+}
+/* Desktop, Laptops & HiRes Tablets  -----------
+   Size: MD                          ----------- */
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  html, body, p {
+    font-size: 16px !important;
+    // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
+  }
+  h1 {
+    font-size: 2.125rem !important;
+  }
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  h3 {
+    font-size: 1.125rem !important;
+  }
+  h4 {
+    font-size: 1.125rem !important;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+/* Large screens          ----------- 
+   Size: LG               ----------- */
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+  html, body, p {
+    font-size: 18px !important;
+    // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
+  }
+  h1 {
+    font-size: 2.2rem !important;
+  }
+  h2 {
+    font-size: 1.85rem !important;
+  }
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+/* HiRes / Retina screens ----------- 
+   Size: XL               ----------- */
+@media only screen and (min-width: 1920px) {
+  html, body, p {
+    font-size: 19px !important;
+    // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
+  }
+  h1 {
+    font-size: 2.45rem !important;
+  }
+  h2 {
+    font-size: 1.95rem !important;
+  }
+  h3 {
+    font-size: 1.35rem !important;
+  }
+  h4 {
+    font-size: 1.35rem !important;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
