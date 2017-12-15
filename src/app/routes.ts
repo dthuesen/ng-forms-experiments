@@ -7,6 +7,6 @@ export const ROUTES = [
   { path: 'home', component: HomeComponent },
   { path: 'simpleform', component: SimpleReactiveFormComponent },
   { path: 'diy-grid-system', component: DiyGridSystemComponent },
-
   { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'css-grid', loadChildren: './css-grid/css-grid.module#CssGridModule'}
 ];

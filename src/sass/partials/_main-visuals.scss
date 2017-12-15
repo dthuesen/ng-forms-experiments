@@ -23,6 +23,7 @@
     &-sm {
       width: auto;
       height: 100%;
+      margin-top: 96px !important;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -32,6 +33,7 @@
     &-md {
       width: auto;
       height: 100%;
+      margin-top: 96px !important;
       filter: saturate(0);
       background-size: cover;
       background-repeat: no-repeat;
@@ -42,7 +44,7 @@
     &-lg {
       width: auto;
       height: 100%;
-      margin-top: 32px !important;
+      margin-top: 96px !important;
       filter: saturate(0);
       background-size: cover;
       background-repeat: no-repeat;
@@ -53,7 +55,7 @@
     &-xl {
       width: auto;
       height: 100%;
-      margin-top: 32px !important;
+      margin-top: 96px !important;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;

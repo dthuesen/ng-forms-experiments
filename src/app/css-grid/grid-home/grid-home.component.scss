@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+  margin: auto;
+  background-color: white;
+}
+nav {
+  display: none;
+}
+.v-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: red;
+}

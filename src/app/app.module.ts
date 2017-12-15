@@ -1,15 +1,13 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-// ngx-translate
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
-// Angualr Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CssGridModule } from './css-grid/css-grid.module';
 import { CustomInputComponent } from './custom-input/custom-input.component';
-// Services
 import { DbServiceService } from './services/db-service.service';
 import { DiyGridSystemComponent } from './diy-grid-system/diy-grid-system.component';
 import { FooterComponent } from './footer/footer.component';
@@ -26,14 +24,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NavComponent } from './nav/nav.component';
 import { ROUTES } from './routes';
-// Responsive Images and other items
 import { ResponsiveModule } from 'ngx-responsive';
-// Router
 import { RouterModule } from '@angular/router';
 import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
 import { TestComponent } from './test/test.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-// Locales i18n
 import localeDe from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 
@@ -60,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CssGridModule,
     FormsModule,
     ReactiveFormsModule,
     ResponsiveModule,
@@ -80,7 +76,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    RouterModule.forRoot( ROUTES, {useHash: false}),
+    RouterModule.forRoot( ROUTES, { useHash: false }),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'de' },

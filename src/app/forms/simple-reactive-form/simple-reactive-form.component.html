@@ -1,43 +1,46 @@
-<h1 class="mat-display-1" translate>simpleform-component-h1</h1>
-
-<form [formGroup]="simpleReactiveForm" novalidate autocomplete="off" class="grid">
+<div class="content-container">
+  <h1 class="mat-display-1" translate>simpleform-component-h1</h1>
   
+  <form [formGroup]="simpleReactiveForm" novalidate autocomplete="off" class="grid">
+    
+    
+    <div formGroupName="driverName" class="grid__row">
+        <h3 class="mat-h3 grid__col-xs-12 grid__col-md-12 grid__col-lg-12" translate>simpleform-component-h3-address-data</h3>
   
-  <div formGroupName="driverName" class="grid__row">
-      <h3 class="mat-h3 grid__col-xs-12 grid__col-md-12 grid__col-lg-12" translate>simpleform-component-h3-address-data</h3>
-
-      <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
-        <input matInput type="text" [placeholder]="'form-first-name' | translate" formControlName="firstName">
-      </mat-form-field>
-
-      <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
-        <input matInput type="text" [placeholder]="'form-last-name' | translate" formControlName="lastName">
-      </mat-form-field>
-
-      <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
-        <input matInput type="text" [placeholder]="'form-name-addition1' | translate" formControlName="nameAdditionOne">
-      </mat-form-field>
-
-      <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
-        <input matInput type="text" [placeholder]="'form-name-addition2' | translate" formControlName="nameAdditionTwo">
-      </mat-form-field>
-
-  </div>
-  <br>
+        <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
+          <input matInput type="text" [placeholder]="'form-first-name' | translate" formControlName="firstName">
+        </mat-form-field>
   
-  <div formGroupName="driverContactInformation" novalidate autocomplete="off" class="grid__row">
-    <h3 class="mat-h3 grid__col-xs-12" translate>simpleform-component-h3-contact-data</h3>
+        <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
+          <input matInput type="text" [placeholder]="'form-last-name' | translate" formControlName="lastName">
+        </mat-form-field>
+  
+        <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
+          <input matInput type="text" [placeholder]="'form-name-addition1' | translate" formControlName="nameAdditionOne">
+        </mat-form-field>
+  
+        <mat-form-field class="grid__col-xs-12 grid__col-sm-12 grid__col-md-3 grid__col-lg-3 grid__col-xl-3">
+          <input matInput type="text" [placeholder]="'form-name-addition2' | translate" formControlName="nameAdditionTwo">
+        </mat-form-field>
+  
+    </div>
+    <br>
+    
+    <div formGroupName="driverContactInformation" novalidate autocomplete="off" class="grid__row">
+      <h3 class="mat-h3 grid__col-xs-12" translate>simpleform-component-h3-contact-data</h3>
+  
+      <mat-form-field class="grid__col-lg-6">
+        <input matInput type="text" [placeholder]="'form-email' | translate" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="grid__col-lg-6">
+        <input matInput type="text" [placeholder]="'form-telephone' | translate" formControlName="telephone">
+      </mat-form-field>
+      <mat-form-field class="grid__col-lg-12">
+        <input matInput type="text" [placeholder]="'form-cellphone' | translate" formControlName="cellphone">
+      </mat-form-field>
+  
+    </div>
+  
+  </form>
 
-    <mat-form-field class="grid__col-lg-6">
-      <input matInput type="text" [placeholder]="'form-email' | translate" formControlName="email">
-    </mat-form-field>
-    <mat-form-field class="grid__col-lg-6">
-      <input matInput type="text" [placeholder]="'form-telephone' | translate" formControlName="telephone">
-    </mat-form-field>
-    <mat-form-field class="grid__col-lg-12">
-      <input matInput type="text" [placeholder]="'form-cellphone' | translate" formControlName="cellphone">
-    </mat-form-field>
-
-  </div>
-
-</form>
+</div>

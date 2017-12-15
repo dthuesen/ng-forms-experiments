@@ -1,90 +1,92 @@
-
-<mat-sidenav-container class="sidenav-container">
-
-  <mat-sidenav #sidenav mode="side" class="sidenav-content">
-    <h3>
-      Die Seitennavigation...
-    </h3>
-  </mat-sidenav>
-
-  <div class="grid ">
-
-    <button mat-mini-fab class="sidenav-toggle-button" color="warn" (click)="sidenav.toggle()">
-      <mat-icon>add</mat-icon>
-    </button>
-
-    <div class="grid__row">
-      
-          <div class="grid__col-xl-offset-2 grid__col-xl-4 grid__col-lg-4 grid__col-md-6 grid__col-sm-12">
-            <div *showItBootstrap="['md','xs','sm', 'lg', 'xl']" alt="lowres svg" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing on xs, sm, md, lg, xl.</div>
-            <img src="../../assets/images/kendall-henderson-43316_small.jpg">
-          </div>
-          <div class="grid__col-xl-3 grid__col-lg-3 grid__col-md-3 grid__col-sm-12">
-            <div *showItBootstrap="['lg', 'xl']" alt="lowres svg" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing only lg and xl.
-            <br> And my grid-size is: xl over 1 column; lg over 2 columns; md over 3 columns; sm over 12 columns</div>
-          </div>
-          <div class="grid__col-xl-offset-1 grid__col-xl-1 grid__col-lg-2 grid__col-md-3 grid__col-sm-12">
-            <div *showItBootstrap="['sm']" class="wire-img-sm wire-img-fullwidth">I'm a wire image, showing only in SM.
-              <a href="https://www.holisticon.de">Holisticon</a>
+<div class="content-container">
+  <mat-sidenav-container class="sidenav-container">
+  
+    <mat-sidenav #sidenav mode="side" class="sidenav-content">
+      <h3>
+        Die Seitennavigation...
+      </h3>
+    </mat-sidenav>
+  
+    <div class="grid ">
+  
+      <button mat-mini-fab class="sidenav-toggle-button" color="warn" (click)="sidenav.toggle()">
+        <mat-icon>add</mat-icon>
+      </button>
+  
+      <div class="grid__row">
+        
+            <div class="grid__col-xl-offset-2 grid__col-xl-4 grid__col-lg-4 grid__col-md-6 grid__col-sm-12">
+              <div *showItBootstrap="['md','xs','sm', 'lg', 'xl']" alt="lowres svg" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing on xs, sm, md, lg, xl.</div>
+              <img src="../../assets/images/kendall-henderson-43316_small.jpg">
             </div>
-          </div>
-          <div class="grid__col-xl-10 grid__col-lg-12">
-            <div *hideItBootstrap="['sm']" class="wire-img-xs wire-img-fullwidth">I'm a wire image, hiding only in SM. 
-            <br> And my grid-size is: xl over 10 columns; lg over 12 columns</div>
-          </div>
-          <div class="grid__col-lg-2">
-            <p class="wire-img-xs wire-img-fullwidth">1.diy-grid-system works!</p>
-            <a href="https://css-tricks.com">css-tricks.com</a>
-          </div>
-          <div class="grid__col-lg-1">
-            <h2 *xs>Now the grid is XS</h2>
-            <h2 *sm>Now the grid is SM</h2>
-            <h2 *md>Now the grid is MD</h2>
-            <h2 *lg>Now the grid is LG</h2>
-            <h2 *xl>Now the grid is XL</h2>
-          </div>
-          <div class="grid__col-lg-1">
-            <p>1.diy-grid-system works!</p>
-          </div>
-          <div class="grid__col-lg-1">
-            <p>1.diy-grid-system works!</p>
-          </div>
-          <div class="grid__col-lg-1">
-            <p>1.diy-grid-system works!</p>
-          </div>
-          <div class="grid__col-lg-1">
-            <p>1.diy-grid-system works!</p>
-          </div>
-          <div class="grid__col-lg-2">
-            <p>2.diy-grid-system works!</p>
-          </div>
-          <div class="grid__col-md-3">
-            <p>3. diy-grid-system works!</p>
-          </div>
-
-
+            <div class="grid__col-xl-3 grid__col-lg-3 grid__col-md-3 grid__col-sm-12">
+              <div *showItBootstrap="['lg', 'xl']" alt="lowres svg" class="wire-img-xs wire-img-fullwidth">I'm a wire image, showing only lg and xl.
+              <br> And my grid-size is: xl over 1 column; lg over 2 columns; md over 3 columns; sm over 12 columns</div>
+            </div>
+            <div class="grid__col-xl-offset-1 grid__col-xl-1 grid__col-lg-2 grid__col-md-3 grid__col-sm-12">
+              <div *showItBootstrap="['sm']" class="wire-img-sm wire-img-fullwidth">I'm a wire image, showing only in SM.
+                <a href="https://www.holisticon.de">Holisticon</a>
+              </div>
+            </div>
+            <div class="grid__col-xl-10 grid__col-lg-12">
+              <div *hideItBootstrap="['sm']" class="wire-img-xs wire-img-fullwidth">I'm a wire image, hiding only in SM. 
+              <br> And my grid-size is: xl over 10 columns; lg over 12 columns</div>
+            </div>
+            <div class="grid__col-lg-2">
+              <p class="wire-img-xs wire-img-fullwidth">1.diy-grid-system works!</p>
+              <a href="https://css-tricks.com">css-tricks.com</a>
+            </div>
+            <div class="grid__col-lg-1">
+              <h2 *xs>Now the grid is XS</h2>
+              <h2 *sm>Now the grid is SM</h2>
+              <h2 *md>Now the grid is MD</h2>
+              <h2 *lg>Now the grid is LG</h2>
+              <h2 *xl>Now the grid is XL</h2>
+            </div>
+            <div class="grid__col-lg-1">
+              <p>1.diy-grid-system works!</p>
+            </div>
+            <div class="grid__col-lg-1">
+              <p>1.diy-grid-system works!</p>
+            </div>
+            <div class="grid__col-lg-1">
+              <p>1.diy-grid-system works!</p>
+            </div>
+            <div class="grid__col-lg-1">
+              <p>1.diy-grid-system works!</p>
+            </div>
+            <div class="grid__col-lg-2">
+              <p>2.diy-grid-system works!</p>
+            </div>
+            <div class="grid__col-md-3">
+              <p>3. diy-grid-system works!</p>
+            </div>
+  
+  
+      </div>
+        <br>
+        <br>
+        <br>
+        <br>
+      <div class="grid__row">
+  
+            <div class="grid__col-md-3">
+              <p>Hello, do I look aligned? </p>
+            </div>
+  
+            <div class="grid__col-xl-9">
+              <p>Yes, you look aligned! </p>
+            </div>
+            <div class="grid__col-xl-5">
+              <p>It is fluid?! Yes, and that means it's boxs width depends on the content.</p>
+            </div>
+  
+  
+  
+      </div>
+  
     </div>
-      <br>
-      <br>
-      <br>
-      <br>
-    <div class="grid__row">
-
-          <div class="grid__col-md-3">
-            <p>Hello, do I look aligned? </p>
-          </div>
-
-          <div class="grid__col-xl-9">
-            <p>Yes, you look aligned! </p>
-          </div>
-          <div class="grid__col-xl-5">
-            <p>It is fluid?! Yes, and that means it's boxs width depends on the content.</p>
-          </div>
-
-
-
-    </div>
+  
+  </mat-sidenav-container>
 
   </div>
-
-</mat-sidenav-container>

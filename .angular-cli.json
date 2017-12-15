@@ -23,7 +23,8 @@
       ],
       "stylePreprocessorOptions": {
         "includePaths": [
-          "sass"
+          "sass",
+          "sass/partials"
         ]
       },
       "scripts": [],
