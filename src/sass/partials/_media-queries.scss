@@ -2,7 +2,7 @@
    Size: XS                             ----------- */
 @media screen and (max-width: 600px) {
   html, body, p {
-    font-size: 12px !important;
+    font-size: 12px;
     // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
   }
   h1 {
@@ -23,7 +23,7 @@
    Size: SM                                    ----------- */
 @media screen and (min-width: 601px) and (max-width: 959px) {
   html, body, p {
-    font-size: 14px !important;
+    font-size: 14px;
     // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
   }
   h1 {
@@ -43,7 +43,7 @@
    Size: MD                          ----------- */
 @media screen and (min-width: 960px) and (max-width: 1279px) {
   html, body, p {
-    font-size: 16px !important;
+    font-size: 16px;
     // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
   }
   h1 {
@@ -66,7 +66,7 @@
    Size: LG               ----------- */
 @media only screen and (min-width: 1280px) and (max-width: 1919px) {
   html, body, p {
-    font-size: 18px !important;
+    font-size: 18px;
     // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
   }
   h1 {
@@ -89,7 +89,7 @@
    Size: XL               ----------- */
 @media only screen and (min-width: 1920px) {
   html, body, p {
-    font-size: 19px !important;
+    font-size: 19px;
     // font-size: calc( $font-size + ( $max-font-size - $min-font-size ) * ( ( 100vw - $grid__bp-xs * 1px ) / ( $grid__bp-largest - $grid__bp-xs ) ) ) !important;
   }
   h1 {

@@ -13,27 +13,37 @@ html, body {
 
 h1 {
   font-size: 2.125rem;
-  font-weight: 200 !important;
+  font-weight: 200;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 1.34em;
   line-height: 40px;
 }
 h2 {
   font-size: 1.75rem;
-  font-weight: 200 !important;
+  font-weight: 200;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 1.34em;
   line-height: 36px;
 }
 h3 {
   font-size: 1.125rem;
-  font-weight: 200 !important;
+  font-weight: 200;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 1.34em;
   line-height: 27px;
 }
 h4 {
   font-size: 1.125rem;
   font-weight: 400;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 1.34em;
   line-height: 27px;
 }
 p {
   font-size: 1rem;
-  font-weight: 100 !important;
+  font-weight: 100;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 1.34em;
   line-height: 24px;
 }
 

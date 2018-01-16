@@ -1,3 +1,4 @@
+import { NavDrawerComponent } from './../nav-drawer/nav-drawer.component';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({

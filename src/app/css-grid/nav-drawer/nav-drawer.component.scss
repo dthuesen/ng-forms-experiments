@@ -1,0 +1,86 @@
+
+@import '../../../sass/partials/_colors.scss';
+
+section.v-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $white;
+  margin-top: 0px;
+  top: 0px;
+  left: -300px;
+  right: auto;
+  width: 350px;
+  overflow-x: hidden;
+  transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  justify-content: flex-start;
+  ul {
+    width: 100%;
+    padding: 0;
+  }
+  li {
+    color: $darkest-grey;
+    padding: 30px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    list-style-type: none;
+  }
+  li:hover {
+    background-color: darken($white, 10%);
+  }
+
+  p.open {
+    margin-right: 4px;
+    align-self: flex-end;
+    border: 2px solid $brand-red;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    display: table-cell;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    color: $brand-red;
+    cursor: pointer;
+    justify-content: flex-start;
+    opacity: 100;
+    transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -ms-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out;
+  }
+  p.open:hover {
+    background-color: darken($white, 5%);
+  }
+  p.open:before {
+    content: 'Open';
+  }
+}
+
+.v-menu:hover {
+  left: 0px;
+  box-shadow: 3px 0px 12px 0px lighten(black, 35%);
+
+  p.open {
+    align-self: flex-start;
+    margin-left: 10px;
+    // opacity: 0;
+    // color: $white;
+    transition: align-self .4s ease-in-out;
+    -webkit-transition: align-self .4s ease-in-out;
+    -moz-transition: align-self .4s ease-in-out;
+    -ms-transition: align-self .4s ease-in-out;
+    -o-transition: align-self .4s ease-in-out;
+  }
+  p.open:before {
+    content: 'Menu';
+  }
+}

@@ -3,12 +3,14 @@ body {
   margin: auto;
   background-color: white;
 }
+
 nav {
   display: none;
 }
-.v-menu {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: red;
+
+.nav-container {
+  display: inline-block;
+}
+.content-container {
+  display: inline-block;
 }

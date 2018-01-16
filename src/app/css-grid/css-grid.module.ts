@@ -1,3 +1,4 @@
+import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
 import { CommonModule } from '@angular/common';
 import { GridHomeComponent } from './grid-home/grid-home.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ import { cssGridRouting } from './css-grid-routing';
   ],
   declarations: [
     GridHomeComponent,
+    NavDrawerComponent,
   ],
   exports: [
     GridHomeComponent,

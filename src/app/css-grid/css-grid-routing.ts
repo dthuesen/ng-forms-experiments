@@ -5,7 +5,7 @@ import { Routes } from '@angular/router/src/config';
 
 const cssGridRoutes: Routes = [
   { path: 'grid-home', component: GridHomeComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'grid-home' }
+  // { path: '', pathMatch: 'full', redirectTo: 'grid-home' }
 ];
 
 export const cssGridRouting: ModuleWithProviders = RouterModule.forChild(cssGridRoutes);
