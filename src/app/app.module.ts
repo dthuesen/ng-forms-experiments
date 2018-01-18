@@ -29,7 +29,7 @@ import { RouterModule } from '@angular/router';
 import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
 import { TestComponent } from './test/test.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import localeDe from '@angular/common/locales/fr';
+import localeDe from '@angular/common/locales/de';
 import { registerLocaleData } from '@angular/common';
 
 // For locales i18n

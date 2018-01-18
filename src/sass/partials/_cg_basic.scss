@@ -1,0 +1,124 @@
+.cg-body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "cnt cnt cnt sidebar sidebar"
+    "cnt cnt cnt sidebar sidebar"
+    "cnt cnt cnt sidebar sidebar"
+    "cnt cnt cnt sidebar sidebar"
+    "footer footer footer footer footer";
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+
+  background-color: $illu-deep-orange;
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "cnt"
+      "sidebar"
+      "footer";
+  }
+}
+
+.cg-content {
+  grid-area: cnt;
+  background-color: $illu-light-blue;
+  color: $white;
+}
+.cg-sidebar {
+  grid-area: sidebar;
+  background-color: $illu-light-red;
+  color: $white;
+}
+.cg-footer {
+  grid-area: footer;
+  background-color: $illu-light-metal;
+  color: $white;
+}
+
+.cg-vmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $brand-red;
+  color: $white;
+  max-width: 5vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.3s;
+  white-space: nowrap;
+  border: 0px;
+
+  h1, h2 {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  a:hover {
+    outline: 0px;
+    background-color: rgba($illu-dark-green, 0.2);
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li .menu-icon {
+    font-size: 2.2em;
+    line-height: 2em;
+  }
+
+  .menu-icon {
+    display: inline-block;
+    width: 0.5rem;
+    padding-right: 1em;
+  }
+
+  .menu-text {
+    display: none;
+    transition: 0.7s;
+    padding-right: 20px;
+  }
+}
+
+.cg-vmenu:hover {
+  background-color: lime;
+  max-width: 25vw;
+  
+  .menu-text {
+    display: inline-block;
+  }
+}
+
+.cg-vmenu:hover:before {
+  content: 'after';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // box-shadow: 0px 2px 7px  rgba($illu-dark-grey, 0.7);
+  text-align: center;
+}
+
+
