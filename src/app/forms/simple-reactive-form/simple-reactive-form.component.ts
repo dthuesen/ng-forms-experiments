@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'simple-reactive-form',
   templateUrl: './simple-reactive-form.component.html',
   styleUrls: ['./simple-reactive-form.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class SimpleReactiveFormComponent implements OnInit {
 

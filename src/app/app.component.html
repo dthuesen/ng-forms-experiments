@@ -1,9 +1,11 @@
-<nav (language)="switchLanguage($event)"></nav>
+<div *ngIf="router.url != '/grid-home'">
+  <nav (language)="switchLanguage($event)" ></nav>
+</div>
 
-<body class="my-theme">
-  <div cols="12">
-    <router-outlet></router-outlet>
+<section class="my-theme router-section">
+  <div cols="12" [@routerAnimation]="getRouteAnimation(route)">
+    <router-outlet #route="outlet"></router-outlet>
   </div>
   <footer></footer>
-</body> 
+</section> 
 

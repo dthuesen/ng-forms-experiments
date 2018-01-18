@@ -7,11 +7,11 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private translate: TranslateService) {
+    constructor(private translate: TranslateService) {
     translate.setDefaultLang('de');
   }
 

@@ -1,86 +1,98 @@
 
-@import '../../../sass/partials/_colors.scss';
+@import 'colors';
+@import 'mixins';
 
+/* The Slide-out Menu on the left side */
 section.v-menu {
+  // Layout
   position: absolute;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: $white;
-  margin-top: 0px;
-  top: 0px;
-  left: -300px;
+  left: -200px;
   right: auto;
-  width: 350px;
-  overflow-x: hidden;
-  transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  justify-content: flex-start;
+  width: 300px;
+  height: 92vh;
+
+  // Design related
+  font-weight: 600;
+  background-color: transparent;
+
+
+  /* The Navigation Links inside the slide-out Menu on the left side */
   ul {
+    transform: translate(2px, 80px);
     width: 100%;
     padding: 0;
   }
   li {
-    color: $darkest-grey;
     padding: 30px;
     display: block;
     text-decoration: none;
     cursor: pointer;
     list-style-type: none;
   }
+
+  // Darken hovered links and applies sketchy border 
   li:hover {
+    @include immaterial-sketchy-border;
+    padding: 28px;
     background-color: darken($white, 10%);
   }
 
-  p.open {
-    margin-right: 4px;
-    align-self: flex-end;
-    border: 2px solid $brand-red;
-    border-radius: 20px;
-    width: 35px;
-    height: 35px;
-    display: table-cell;
-    font-size: 13px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 35px;
-    color: $brand-red;
-    cursor: pointer;
-    justify-content: flex-start;
-    opacity: 100;
-    transition: opacity .1s ease-in-out;
-    -webkit-transition: opacity .1s ease-in-out;
-    -moz-transition: opacity .1s ease-in-out;
-    -ms-transition: opacity .1s ease-in-out;
-    -o-transition: opacity .1s ease-in-out;
-  }
-  p.open:hover {
-    background-color: darken($white, 5%);
-  }
-  p.open:before {
-    content: 'Open';
-  }
+}
+
+/* Initial Open Button */
+div.open {
+  @include immaterial-borders-radius20;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+
+  // vertical-align: middle;
+  top: 0px;
+  transform: translate(220px, 2em);
+
+  color: black;
+  background-color: $white;
+  box-shadow: 6px 6px 6px 0 black;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+
+div.open:after {
+  content: 'Open';
 }
 
 .v-menu:hover {
+  /* Open Menu on hover */
+  @include immaterial-sketchy-border;
+  cursor: pointer;
   left: 0px;
   box-shadow: 3px 0px 12px 0px lighten(black, 35%);
+  background-color: $white;
+  transition: all .6s ease;
 
-  p.open {
-    align-self: flex-start;
-    margin-left: 10px;
-    // opacity: 0;
-    // color: $white;
-    transition: align-self .4s ease-in-out;
-    -webkit-transition: align-self .4s ease-in-out;
-    -moz-transition: align-self .4s ease-in-out;
-    -ms-transition: align-self .4s ease-in-out;
-    -o-transition: align-self .4s ease-in-out;
+  ul {
+    transform: translate(1px, 78px);
   }
-  p.open:before {
+
+  /* Move Button on menu hover */
+  div.open {
+    top: 26px;
+    opacity: .8;
+    width: 222px;
+    font-size: 22px;
+    transform: translateX(34px);
+    transition: width .4s ease;
+  }
+
+  div.open:after {
     content: 'Menu';
   }
+
 }

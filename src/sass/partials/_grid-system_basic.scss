@@ -26,14 +26,14 @@ html {
 
 body {
   position: relative;
-  padding-top: 34px;
+  // padding-top: 34px;
   padding-bottom: 60px;
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
-  // padding-bottom: 1.35em;
   height: 100%;
 }
+
 a {
   color: grey;
 }
@@ -51,7 +51,7 @@ a:hover {
 .nav {
   &__fixed {
     position: fixed !important;
-    margin-top: -34px !important;
+    // margin-top: -34px;
     width: 100%;
     z-index: 985;
     transition: 0.3s ease-in all;
@@ -67,6 +67,7 @@ a:hover {
   }
 
 }
+
 /** This is for placing elements in the toolbar onto the right side **/
 .fill-remaining-space {
   /** This fills the remaining space, by using flexbox. 
@@ -80,7 +81,7 @@ a:hover {
 .content-container {
   padding-left: 16px;
   padding-right: 16px;
-  margin-top: 32px;
+  // margin-top: 32px;
   margin-left: 64px;
   margin-right: 64px;
 }
@@ -88,7 +89,7 @@ a:hover {
 .content-container-grid {
   padding-left: 16px;
   padding-right: 16px;
-  margin-top: 32px;
+  // margin-top: 32px;
   margin-left: 64px;
   margin-right: 64px;
 }
@@ -137,10 +138,8 @@ mat-sidenav {
   border: 2px;
   padding-right: 10px;
   top: 80px;
-  // left: -35px;
   margin-bottom: -80px;
   height: 100%
-  // width: 200px;
 }
 
 .mat-sidenav-content,

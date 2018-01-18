@@ -4,9 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { SimpleReactiveFormComponent } from './forms/simple-reactive-form/simple-reactive-form.component';
 
 export const ROUTES = [
-  { path: 'home', component: HomeComponent },
-  { path: 'simpleform', component: SimpleReactiveFormComponent },
-  { path: 'diy-grid-system', component: DiyGridSystemComponent },
+  { path: 'home', component: HomeComponent, data: { state: 'home'} },
+  { path: 'simpleform', component: SimpleReactiveFormComponent, data: { state: 'simpleform'} },
+  { path: 'diy-grid-system', component: DiyGridSystemComponent, data: { state: 'diy-grid-system'} },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'css-grid', loadChildren: './css-grid/css-grid.module#CssGridModule'}
+  { path: 'css-grid', loadChildren: './css-grid/css-grid.module#CssGridModule', data: { state: 'css-grid'} }
 ];
