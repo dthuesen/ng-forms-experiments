@@ -1,0 +1,41 @@
+@import "colors";
+@import "images";
+%immaterial-borders-radius20 {
+    border: 3px solid $darkest-grey;
+    border-radius: 20px;
+    mask-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+    $font-family: "Cabin Sketch";
+    color: black;
+}
+
+%immaterial-borders-radius0 {
+    border: 3px solid $darkest-grey;
+    border-radius: 20px;
+    mask-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+    $font-family: "Cabin Sketch";
+    color: black;
+}
+
+%immaterial-sketchy-border {
+    $font-family: "Cabin Sketch";
+    border: 2px solid #aaa;
+    border-image: url("https://raw.githubusercontent.com/kiswa/WireFrame/master/noise.png") 2 stretch;
+    box-shadow: none;
+    color: black;
+}
+
+%image-fill-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+%picture-placeholder {
+    background-image: url("/assets/images/xwireframe.png");
+    background-size: fill;
+    background-size: 100% 100%;
+    background-position: center center;
+    border: 2px solid #aaa;
+    border-image: url("https://raw.githubusercontent.com/kiswa/WireFrame/master/noise.png") 2 stretch;
+    box-shadow: none;
+}

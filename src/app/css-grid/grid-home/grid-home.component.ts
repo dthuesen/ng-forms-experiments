@@ -10,8 +10,6 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class GridHomeComponent implements OnInit {
 
-  marginTopClass = '';
-
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('de');
   }

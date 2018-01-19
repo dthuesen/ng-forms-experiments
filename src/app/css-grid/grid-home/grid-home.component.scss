@@ -1,99 +1,117 @@
 // import other SASS Style Sheets
-@import 'images';
-@import 'mixins';
-
-grid-home div.page {
-  margin-top: 0px;
+@import "images";
+@import "mixins";
+@import "placeholders";
+* {
+    box-sizing: borderbox;
+    margin: 0;
+    padding: 0;
 }
 
+:host {
+    height: calc(100vh - 80px); // Viewport height minus footer height
+    display: flex;
+}
 
 .page-wrapper {
-  background-color: rgb(187, 187, 187);
-  height: 100vh;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(206, 206, 206);
 }
 
 .key-visual {
-  &-wrapper {
-    width: 100vw;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    font-size: 2em;
-  }
-  &-img {
-    @include image-fill-background;
-    
-    &__illu {
-      flex: 1 100%;
-      height: 8em;
-      @include picture-placeholder;
+    // item of page-wrapper
+    &-wrapper {
+        width: 100vw;
+        flex: 0 0 8em;
+        font-size: 2em;
     }
-  }
+    &-img {
+        @extend %image-fill-background;
+        &__illu {
+            height: 8em;
+            @extend %picture-placeholder;
+        }
+    }
 }
 
+// item of page-wrapper
 div.content-wrapper {
-  padding-top: 2em;
-  padding-left: 5px;
-  padding-right: 5px;
-  display: flex column;
-  height: 100%;
-  margin: 0 20vh;
-  border: 2px solid brown;
-  background: $white;
-  @media screen and (max-width: 710px) {
-    margin: 0;
-    width: 100hw;
-  }
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-top: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: $white;
+    margin: 0 8em;
+    @media screen and (max-width: 1320px) {
+        margin: 0 40px;
+        width: 100hw;
+    }
+    @media screen and (max-width: 740px) {
+        margin: 0 15px;
+        width: 100hw;
+    }
+    @media screen and (max-width: 620px) {
+        margin: 0;
+        width: 100hw;
+    }
+}
+
+@supports (display: grid) {
+    div.content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 h1 {
-  flex-basis: 100%;
+    flex-basis: 100%;
 }
 
 .text-area {
-
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-width: 100hw;
-    border: 4px dashed goldenrod;
-    justify-content: space-between;
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-
-  &__element {
-    @include immaterial-sketchy-border;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1em;
-    flex: 1;
-    margin: 5px;
-  }
-
-  &__paragraph {
-    color:greenyellow;
-  }
-
-  &__img {
-    @include immaterial-sketchy-border;
-
-    /** 
-     * Picture Ratio call - arguments: 
-     *   -     width (without %)
-     *   -     ratio width (e.g. 16 from 16:9)
-     *   -     ratio height (e.g. 9 from 16:9)
-     */
-    @include pictureRatio(100, 15, 10);
-    margin-bottom: 10px;
-
-    @include picture-placeholder;
-    @include image-fill-background;
-  }
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 100hw;
+        justify-content: space-between;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    &__element {
+        @extend %immaterial-sketchy-border;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1em;
+        flex: 1;
+        margin: 5px;
+        min-width: 190px;
+    }
+    &__paragraph {
+        // color: greenyellow;
+    }
+    &__img {
+        @extend %immaterial-sketchy-border;
+        /** 
+         * Picture Ratio call - arguments: 
+         *   -     width (without %)
+         *   -     ratio width (e.g. 16 from 16:9)
+         *   -     ratio height (e.g. 9 from 16:9)
+         */
+        @include pictureRatio(100, 15, 10);
+        margin-bottom: 10px;
+        @extend %picture-placeholder;
+        @extend %image-fill-background;
+        &-small {
+            @include pictureRatio(30, 4, 3);
+            @extend %picture-placeholder;
+            float: left;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    }
 }
-
-
-
-
