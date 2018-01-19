@@ -1,149 +1,156 @@
-
 /** import the light or dark styles **/
+
 // @import "light-theme.scss";
 // @import "dark-theme.scss";
 @import "immaterial-theme.scss";
 
 /** import the mandatories **/
-@import "colors.scss";
-@import 'font-sizes.scss';
-@import 'media-queries.scss';
-@import 'breakpoints.scss';
-@import 'main-visuals.scss';
 
+@import "colors.scss";
+@import "font-sizes.scss";
+@import "media-queries.scss";
+@import "breakpoints.scss";
+@import "main-visuals.scss";
 
 /** import the GRID SYSTEM **/
-@import "grid-system";
 
-*, *:before, *:after {
-  box-sizing: inherit;
+@import "grid-system";
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 html {
-  font-family: $fontfamily;
-  font-size: $font-size;
+    font-family: $fontfamily;
+    font-size: $font-size;
 }
 
 body {
-  position: relative;
-  // padding-top: 34px;
-  padding-bottom: 60px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  height: 100%;
+    position: relative;
+    // padding-top: 34px;
+    // padding-bottom: 60px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    // height: 100%;
 }
 
 a {
-  color: grey;
+    color: grey;
 }
+
 a:focus {
-  outline: 1px solid;
-  outline-offset: .15em;
-  color: skyblue;
+    outline: 1px solid;
+    outline-offset: 0.15em;
+    color: skyblue;
 }
+
 a:hover {
-  outline: 1px solid;
-  outline-offset: .15em;
-  color: skyblue;
+    outline: 1px solid;
+    outline-offset: 0.15em;
+    color: skyblue;
 }
 
 .nav {
-  &__fixed {
-    position: fixed !important;
-    // margin-top: -34px;
-    width: 100%;
-    z-index: 985;
-    transition: 0.3s ease-in all;
-  }
-  &__collapsed {
-    margin-top: -132px !important;
-    transition: 0.2s ease-out all;
-  }
-  &__logo {
-    width: auto;
-    height: 38px;
-    margin-left: 68px;
-  }
-
+    &__fixed {
+        position: fixed !important;
+        // margin-top: -34px;
+        width: 100%;
+        z-index: 985;
+        transition: 0.3s ease-in all;
+    }
+    &__collapsed {
+        margin-top: -132px !important;
+        transition: 0.2s ease-out all;
+    }
+    &__logo {
+        width: auto;
+        height: 38px;
+        margin-left: 68px;
+    }
 }
+
 
 /** This is for placing elements in the toolbar onto the right side **/
+
 .fill-remaining-space {
-  /** This fills the remaining space, by using flexbox. 
+    /** This fills the remaining space, by using flexbox. 
       Every toolbar row uses a flexbox row layout.      **/
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
+
 .toolbar-right-space {
-  margin-right: 64px;
+    margin-right: 64px;
 }
 
 .content-container {
-  padding-left: 16px;
-  padding-right: 16px;
-  // margin-top: 32px;
-  margin-left: 64px;
-  margin-right: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    // margin-top: 32px;
+    margin-left: 64px;
+    margin-right: 64px;
 }
 
 .content-container-grid {
-  padding-left: 16px;
-  padding-right: 16px;
-  // margin-top: 32px;
-  margin-left: 64px;
-  margin-right: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    // margin-top: 32px;
+    margin-left: 64px;
+    margin-right: 64px;
 }
 
 .app-footer {
-  z-index: 100;
-  position: fixed !important;
-  bottom: 0 !important;
-  width: 100%;
-  height: 5em;
-  margin: 0px auto;
-  padding-left: 80px;
-  padding-right: 80px;
+    z-index: 100;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+    height: 5em;
+    margin: 0px auto;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
-mat-form-field, app-custom-input {
-  width: 100%;
+mat-form-field,
+app-custom-input {
+    width: 100%;
 }
 
 .sidenav-container {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .sidenav-content {
-  margin-left: 2px;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+    margin-left: 2px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
+
 .sidenav-toggle-button {
-  z-index: 999;
-  position: fixed !important;
-  left: 20px !important;
-  top: 94px !important;
+    z-index: 999;
+    position: fixed !important;
+    left: 20px !important;
+    top: 94px !important;
 }
 
 mat-sidenav-content {
-  z-index: 2;
-  padding-left: 6px;
+    z-index: 2;
+    padding-left: 6px;
 }
 
 mat-sidenav {
-  background-color: dark-green;
-  border: 2px;
-  padding-right: 10px;
-  top: 80px;
-  margin-bottom: -80px;
-  height: 100%
+    background-color: dark-green;
+    border: 2px;
+    padding-right: 10px;
+    top: 80px;
+    margin-bottom: -80px;
+    height: 100%;
 }
 
 .mat-sidenav-content,
 .sidenav-container mat-sidenav {
-  overflow: visible;
+    overflow: visible;
 }
-

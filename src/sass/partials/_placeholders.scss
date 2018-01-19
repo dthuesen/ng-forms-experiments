@@ -39,3 +39,16 @@
     border-image: url("https://raw.githubusercontent.com/kiswa/WireFrame/master/noise.png") 2 stretch;
     box-shadow: none;
 }
+
+%host {
+    min-height: calc(100vh - 80px); // Viewport height minus footer height
+    display: flex;
+}
+
+%page-wrapper {
+    // min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    background-color: rgb(211, 175, 175);
+}

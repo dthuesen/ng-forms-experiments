@@ -11,7 +11,8 @@ section.v-menu {
     left: -200px;
     right: auto;
     width: 300px;
-    height: 92vh;
+    // min-height: 92vh;
+    min-height: 100%;
     // Design related
     font-weight: 600;
     background-color: transparent;

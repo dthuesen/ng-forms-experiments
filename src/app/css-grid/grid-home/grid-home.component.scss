@@ -9,17 +9,19 @@
 }
 
 :host {
-    height: calc(100vh - 80px); // Viewport height minus footer height
-    display: flex;
+    @extend %host;
 }
 
 .page-wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(206, 206, 206);
+    @extend %page-wrapper;
 }
 
+// .page-wrapper {
+//     min-height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: rgb(206, 206, 206);
+// }
 .key-visual {
     // item of page-wrapper
     &-wrapper {
